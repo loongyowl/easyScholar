@@ -51,8 +51,7 @@ scholar.appendRank = function() {
 		let singlePrepareFindElement = $(this);
 		let node = singlePrepareFindElement.find("h3 > a:first");
 		setTimeout(function() {
-			let code = singlePrepareFindElement.find(".gs_fl a:nth-child(4)").attr('href')
-				.toString().match(/(?<=related:).*?(?=:scholar)/);
+			let code = singlePrepareFindElement.parent().attr("data-cid");
 			let url = cite_api_format = document.location.hostname + "?q=info:" + code +
 				":scholar.google.com/&output=cite&scirp=0&hl=zh-CN";
 			$.ajax({
