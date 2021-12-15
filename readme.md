@@ -323,6 +323,7 @@
 - UIBE：《对外经济贸易大学科研奖励外文核心期刊专题分类目录》英文约720种。
 - [PKU：《中文核心期刊要目总览》（2020年版）》](https://kjc.snut.edu.cn/info/1030/2353.htm)，中文约2000种。
 - XDU：《关于发布《西安电子科技大学高水平期刊目录（2021年）》的通知》，英文约175种，中文约300种。
+- SDUFE：《《山东财经大学学术期刊分类目录》》，英文约200种，中文约650种。
 - 百度翻译接口：https://api.fanyi.baidu.com/
 - 谷歌翻译接口：https://translate.googleapis.com/translate_a
 - 腾讯翻译接口：https://cloud.tencent.com/document/product/551/15619
@@ -366,4 +367,4 @@
 | 2021.12.3  |          支持腾讯翻译源，设置翻译位置，隐藏翻译结果          |   Nixiak-nan   |
 | 2021.12.4  |                     支持彩云小译（V4.2）                     |   Nixiak-nan   |
 | 2021.12.13 |       支持知网高级搜索，修复与sci-hub button冲突的bug        |   Nixiak-nan   |
-| 2021.12.15 |          重写的谷歌学术判断逻辑，现在不会卡住页面了          |   Nixiak-nan   |
+| 2021.12.15 | 重写的谷歌学术判断逻辑，现在不会卡住页面了<br>增加了山东财经大学 |   Nixiak-nan   |

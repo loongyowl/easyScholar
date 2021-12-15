@@ -48,6 +48,7 @@
 				"show_ranking/ranking/swjtu.js",
 				"show_ranking/ranking/pku.js",
 				"show_ranking/ranking/xdu.js",
+				"show_ranking/ranking/sdufe.js",
 				
                 "show_ranking/site/siteUtil.js",
                 "show_ranking/site/acm.js",
@@ -85,6 +86,7 @@
 				"show_ranking/data/cscdRankingName.js",
 				"show_ranking/data/uibeRankingName.js",
 				"show_ranking/data/swjtuRankingName.js",
+				"show_ranking/data/sdufeRankingName.js",
 				"show_ranking/data/abbName1.js",
 				"show_ranking/data/abbName2.js",
 				"show_ranking/data/abbName3.js",

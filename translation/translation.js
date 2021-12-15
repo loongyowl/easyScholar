@@ -33,7 +33,6 @@ $(document).keydown(
 		}else if(keyCode == parseInt(translateHideKeycode)){
 			if($(".easyScholarTranslationResult").length > 0){
 				hideTranslateResult();
-				console.log("----");
 			}
 		}
 	});
