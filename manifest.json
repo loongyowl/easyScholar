@@ -49,6 +49,7 @@
 				"show_ranking/ranking/pku.js",
 				"show_ranking/ranking/xdu.js",
 				"show_ranking/ranking/sdufe.js",
+				"show_ranking/ranking/eii.js",
 				
                 "show_ranking/site/siteUtil.js",
                 "show_ranking/site/acm.js",
@@ -93,6 +94,7 @@
 				"show_ranking/data/abbName4.js",
 				"show_ranking/data/pkuRankingName.js",
 				"show_ranking/data/xduRankingName.js",
+				"show_ranking/data/eiiRankingName.js",
 				
                 "show_ranking/script.js",
 
