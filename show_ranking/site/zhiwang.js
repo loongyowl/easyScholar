@@ -10,21 +10,36 @@ zhiwang.start = function() {
 
 
 zhiwang.addRankings = function() {
-	var results = $("td.source a");
+	var results = $("td.source");	//
 
 	results.each(function(index) {
 		let result = $(this);
-		var parent = result.parent("td");
-		var flag = $(parent);
-
-		if (flag.find("span").length == 0) {
-			let source = result.text();
-			if (source.length != 0) {
-				let name = source;
-				for (let getRankingSpan of zhiwang.rankingSpanProvider) {
-					result.after(getRankingSpan(name));
+		let node ;
+		let title ;
+		swufe_list = result.parent().find("span[class$='none']");
+		swufe_list2 = result.parent().find("span.ccf-ranking");
+		if (swufe_list.length == 0 && swufe_list2.length == 0) {
+			if(result.find("a").length != 0){
+				title = result.find("a").text();
+				node = result.find("a");
+				
+				if (title.length != 0) {
+					for (let getRankingSpan of zhiwang.rankingSpanProvider) {
+						node.after(getRankingSpan(title));	//中文
+					}
+				}
+				
+			}else{
+				title = result.text();
+				node = result;
+				
+				if (title.length != 0) {
+					for (let getRankingSpan of zhiwang.rankingSpanProvider) {
+						node.append(getRankingSpan(title.toUpperCase()));	//英文
+					}
 				}
 			}
+
 		}
 	});
 };

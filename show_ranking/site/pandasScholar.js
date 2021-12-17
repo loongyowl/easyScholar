@@ -1,20 +1,20 @@
-const scholar = {};
-scholar.rankSpanList = [];
-scholar.rankSpanListSwufe = [];
+const pandasScholar = {};
+pandasScholar.rankSpanList = [];
+pandasScholar.rankSpanListSwufe = [];
 
-scholar.run = function() {
-	let url = window.location.pathname;
-	if (url == "/scholar") { // 查找文献
-		scholar.appendRank();
-	} else if (url == "/citations") { // 学者的页面
+pandasScholar.run = function() {
+	let url = location.href;
+	if (url.startsWith("https://sc.panda321.com/scholar") || url.startsWith("https://xs2.dailyheadlines.cc/scholar")) { // 查找文献
+		pandasScholar.appendRank();
+	} else if (url.startsWith("https://sc.panda321.com/citations") || url.startsWith("https://xs2.dailyheadlines.cc/citations")) { // 学者的页面
 		setInterval(function() {
-			scholar.addRankings();
+			pandasScholar.addRankings();
 		}, 500);
 	}
 };
 
 
-scholar.appendRank = function() {
+pandasScholar.appendRank = function() {
 	let elements = $("#gs_res_ccl_mid > div > div.gs_ri"); // 获得每一行搜索项目
 	elements.each(function() {
 		let node = $(this).find("h3 > a:first"); // 加first，不然和sci-hub 插件冲突
@@ -38,7 +38,7 @@ scholar.appendRank = function() {
 			return true;
 		}
 
-		for (let getRankSpan of scholar.rankSpanListSwufe) {
+		for (let getRankSpan of pandasScholar.rankSpanListSwufe) {
 			node.after(getRankSpan(title.toUpperCase()));
 		}
 	});
@@ -47,40 +47,42 @@ scholar.appendRank = function() {
 	let prepareFindElement = $("div.easyScholarPrepareFind");
 	prepareFindElement.each(function(k, v) {
 
-		let delay = Math.floor(Math.random() * (2000 - 1000 + 1) + 1500);
 		let singlePrepareFindElement = $(this);
 		let node = singlePrepareFindElement.find("h3 > a:first");
-		setTimeout(function() {
-			let code = singlePrepareFindElement.parent().attr("data-cid");
-			let url = document.location.hostname + "?q=info:" + code +
-				":scholar.google.com/&output=cite&scirp=0&hl=zh-CN";
-			$.ajax({
-				url: url,
-				method: "get"
-			}).then(function(resp) {
-				singlePrepareFindElement.find("span.easyScholarTemp").hide();
-				let $divAppendContents = $('<div></div>').append(resp);
-				let temp = $divAppendContents.find("tr");
-				let title;
-				$.each(temp, function() {
-					if ($(this).find("th.gs_cith").text() == "MLA" || $(this).find(
-							"th.gs_cith").text() == "APA") {
-						title = $(this).find("div.gs_citr i:first").text();
-						return false;	// break
-					}
-				});
-				for (let getRankSpan of scholar.rankSpanListSwufe) {
-					$(node).after(getRankSpan(title.toUpperCase()));
+
+		let code = singlePrepareFindElement.parent().attr("data-cid");
+		console.log(location.hostname);
+		let url  = "https://" + location.hostname + "?q=info:" + code +
+			":scholar.google.com/&output=cite&scirp=0&hl=zh-CN";
+		$.ajax({
+			url: url,
+			method: "get"
+		}).then(function(resp) {
+			singlePrepareFindElement.find("span.easyScholarTemp").hide();
+			let $divAppendContents = $('<div></div>').append(resp);
+			let temp = $divAppendContents.find("tr");
+			let title;
+			$.each(temp, function() {
+				if ($(this).find("th.gs_cith").text() == "MLA" || $(this).find(
+						"th.gs_cith").text() == "APA") {
+					title = $(this).find("div.gs_citr i:first").text();
+					return false;	// break
 				}
 			});
-		}, delay * k);
+			if (title != undefined){
+				for (let getRankSpan of pandasScholar.rankSpanListSwufe) {
+					$(node).after(getRankSpan(title.toUpperCase()));
+				}
+			}
+		});
+
 	});
 }
 
 
 
 
-scholar.addRankings = function() {
+pandasScholar.addRankings = function() {
 
 	let results = $("tr.gsc_a_tr");
 	results.each(function(index) {
@@ -101,7 +103,7 @@ scholar.addRankings = function() {
 			}else{
 				return true;	// continue
 			}
-			for (let getRankSpan of scholar.rankSpanListSwufe) {
+			for (let getRankSpan of pandasScholar.rankSpanListSwufe) {
 				node.after(getRankSpan(title.toUpperCase()));
 			}
 		}

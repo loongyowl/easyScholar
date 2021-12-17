@@ -57,6 +57,7 @@ function processName(name){
 	name_list.push(name.replace("（",'(').replace("）",')'));
 	name_list.push(name.replace("·",'.'));
 	name_list.push(name.replace("·",'、'));
+	name_list.push(name.replace(".",'、'));
 	
 	if (name.indexOf("(") != -1 ){
 		name_list.push(name.replace("(",'.').replace(")",''));

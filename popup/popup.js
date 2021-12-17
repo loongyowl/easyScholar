@@ -1,4 +1,4 @@
-let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii'];
+let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci'];
 
 function save_options() {
 
@@ -41,6 +41,8 @@ function restore_options() {
 		document.getElementById('pku').checked = items.includes('pku');
 		document.getElementById('sdufe').checked = items.includes('sdufe');
 		document.getElementById('eii').checked = items.includes('eii');
+		document.getElementById('nju').checked = items.includes('nju');
+		document.getElementById('ahci').checked = items.includes('ahci');
 		document.getElementById('check-all').checked = items.includes('all');
 	});
 }

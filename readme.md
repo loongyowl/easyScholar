@@ -8,8 +8,6 @@
 
 ## 简介
 
-> “easyScholar” 是踩在了巨人的肩膀上，利用了Github上开源的CCF插件二次制作而成，在此非常感谢作者的无私奉献。如果您需要该版本，请转到以下位置进行浏览和下载：[CCFrank4dblp](https://github.com/WenyanLiu/CCFrank4dblp)
-
 **easyScholar** 是一款让**科研更加方便**的浏览器扩展，它的功能特色有：
 
 - **显示会议、期刊等级**————支持在各大论文搜索网站，显示各种期刊、会议等级排名，浏览文献变得如此轻松。
@@ -22,7 +20,7 @@
 
 1. Microsoft Edge应用商店下载 **（推荐）**：点击[easyScholar](https://microsoftedge.microsoft.com/addons/detail/swufe%E3%80%81cff%EF%BC%9A%E6%98%BE%E7%A4%BA%E4%BC%9A%E8%AE%AE%E6%9C%9F%E5%88%8A%E7%AD%89%E7%BA%A7/bpepicgagmdchlkjjeeiekpoafehpagm?hl=zh-CN)，点击安装即可。
 2. 谷歌应用商店下载 **（需要梯子）**  ：点击[easyScholar](https://chrome.google.com/webstore/detail/swufe-cff-show-conference/njgedjcccpcfmjecccaajkjiphpddfji)，点击安装即可。
-2. 火狐应用商店下载：点击[easyScholar](https://addons.mozilla.org/zh-CN/firefox/addon/swufe_ccf_show_rank/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)，点击安装即可。
+2. 火狐应用商店下载：点击[easyScholar](https://addons.mozilla.org/zh-CN/firefox/addon/easyscholar/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)，点击安装即可。
 3. 离线安装方法（此为谷歌浏览器教程，其他浏览器步骤基本相似）：
    - 从[GitHub](https://github.com/Nixiak-nan/easyScholar)**下载**源代码
    - 解压至**某个文件夹**中。（可删除picture、数据份文件文件夹，readme.md）
@@ -39,39 +37,43 @@
 
 
 
-|                        学校名称                         | **西南财经大学** |  复旦   | 上海交大 | **央财** |  厦大   |  人大   | 西南交大  |   贸大   | 西军电  |   山财    |
-| :-----------------------------------------------------: | :--------------: | :-----: | :------: | :------: | :-----: | :-----: | :-------: | :------: | :-----: | :-------: |
-|                      **英文缩写**                       |    **SWUFE**     | **FDU** | **SJTU** | **CUFE** | **XMU** | **RUC** | **SWJTU** | **UIBE** | **XDU** | **SDUFE** |
-|            **[知网](https://www.cnki.net/)**            |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |          |    ✔    |     ✔     |
-|     **[微软学术](https://academic.microsoft.com)**      |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-| **[谷歌学术](https://scholar.google.com.hk/?hl=zh-CN)** |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|       **[Springer](https://link.springer.com/)**        |      **✔**       |         |          |  **✔**   |         |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|     **[IEEExplore](https://ieeexplore.ieee.org/)**      |      **✔**       |         |          |  **✔**   |         |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|         **[DBLP](https://dblp.uni-trier.de/)**          |        ✔         |         |          |    ✔     |         |    ✔    |     ✔     |    ✔     |    ✔    |     ✔     |
-|  **[web of science](http://apps.webofknowledge.com/)**  |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|        **[百度学术](https://xueshu.baidu.com/)**        |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|          **[必应学术](https://cn.bing.com/)**           |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|          **[Aminer](https://www.aminer.cn/)**           |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|     **[PubMed](https://pubmed.ncbi.nlm.nih.gov/)**      |      **✔**       |         |          |  **✔**   |         |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
-|         **[ReadPaper](https://readpaper.com/)**         |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |    ✔    |     ✔     |
+|                         学校名称                         | **西南财经大学** |  复旦   | 上海交大 | **央财** |  厦大   |  人大   | 西南交大  |   贸大   | 西军电  |   山财    |  南大   |
+| :------------------------------------------------------: | :--------------: | :-----: | :------: | :------: | :-----: | :-----: | :-------: | :------: | :-----: | :-------: | :-----: |
+|                       **英文缩写**                       |    **SWUFE**     | **FDU** | **SJTU** | **CUFE** | **XMU** | **RUC** | **SWJTU** | **UIBE** | **XDU** | **SDUFE** | **NJU** |
+|            **[知网](https://www.cnki.net/)**             |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |    ✔     |  **✔**  |   **✔**   |    ✔    |
+|      **[微软学术](https://academic.microsoft.com)**      |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+| **[谷歌学术](https://scholar.google.com.hk/?hl=zh-CN)**  |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+| **[熊猫学术(谷歌镜像)](https://xs2.dailyheadlines.cc/)** |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|    **[深度学术(谷歌镜像)](https://sc.panda321.com/)**    |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|        **[Springer](https://link.springer.com/)**        |      **✔**       |         |          |  **✔**   |         |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|      **[IEEExplore](https://ieeexplore.ieee.org/)**      |      **✔**       |         |          |  **✔**   |         |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|          **[DBLP](https://dblp.uni-trier.de/)**          |      **✔**       |         |          |  **✔**   |         |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|  **[web of science](http://apps.webofknowledge.com/)**   |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|        **[百度学术](https://xueshu.baidu.com/)**         |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|           **[必应学术](https://cn.bing.com/)**           |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|           **[Aminer](https://www.aminer.cn/)**           |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|      **[PubMed](https://pubmed.ncbi.nlm.nih.gov/)**      |      **✔**       |         |          |  **✔**   |         |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
+|         **[ReadPaper](https://readpaper.com/)**          |      **✔**       |  **✔**  |  **✔**   |  **✔**   |  **✔**  |  **✔**  |   **✔**   |  **✔**   |  **✔**  |   **✔**   |  **✔**  |
 
 
 
-|                        单位名称                         | **科睿唯安** | **科睿唯安** | 中科院  | **中国计算机学会** | 南大核心  | 中国科学引文数据库 | 北大中文核心 | 工程索引 |
-| :-----------------------------------------------------: | :----------: | :----------: | :-----: | :----------------: | :-------: | :----------------: | :----------: | :------: |
-|                      **英文缩写**                       |   **SCI**    |  **SCIIF**   | **SCI** |      **CCF**       | **CSSCI** |      **CSCD**      |   **PKU**    |  **EI**  |
-|            [**知网**](https://www.cnki.net/)            |              |              |         |                    |     ✔     |         ✔          |      ✔       |    ✔     |
-|     [**微软学术**](https://academic.microsoft.com)      |    **✔**     |    **✔**     |    ✔    |         ✔          |     ✔     |         ✔          |      ✔       |    ✔     |
-| **[谷歌学术](https://scholar.google.com.hk/?hl=zh-CN)** |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |
-|       [**Springer**](https://link.springer.com/)        |    **✔**     |    **✔**     |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |
-|     **[IEEExplore](https://ieeexplore.ieee.org/)**      |    **✔**     |    **✔**     |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |
-|         **[DBLP](https://dblp.uni-trier.de/)**          |      ✔       |      ✔       |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |
-|  **[web of science](http://apps.webofknowledge.com/)**  |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |
-|        **[百度学术](https://xueshu.baidu.com/)**        |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |
-|          **[必应学术](https://cn.bing.com/)**           |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |
-|          **[Aminer](https://www.aminer.cn/)**           |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |
-|     **[PubMed](https://pubmed.ncbi.nlm.nih.gov/)**      |    **✔**     |    **✔**     |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |
-|         **[ReadPaper](https://readpaper.com/)**         |    **✔**     |    **✔**     |  **✔**  |       **✔**        |   **✔**   |       **✔**        |    **✔**     |    ✔     |
+|                        单位名称                         | **科睿唯安** | **科睿唯安** | 中科院  | **中国计算机学会** | 南大核心  | 中国科学引文数据库 | 北大中文核心 | 工程索引 | 艺术与人文索引 |
+| :-----------------------------------------------------: | :----------: | :----------: | :-----: | :----------------: | :-------: | :----------------: | :----------: | :------: | :------------: |
+|                      **英文缩写**                       |   **SCI**    |  **SCIIF**   | **SCI** |      **CCF**       | **CSSCI** |      **CSCD**      |   **PKU**    |  **EI**  |   **A&HCI**    |
+|            [**知网**](https://www.cnki.net/)            |    **✔**     |    **✔**     |  **✔**  |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |     **✔**      |
+|     [**微软学术**](https://academic.microsoft.com)      |    **✔**     |    **✔**     |    ✔    |         ✔          |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+| **[谷歌学术](https://scholar.google.com.hk/?hl=zh-CN)** |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+|  **[熊猫学术(镜像)](https://xs2.dailyheadlines.cc/)**   |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+|     **[深度学术(镜像)](https://sc.panda321.com/)**      |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+|       [**Springer**](https://link.springer.com/)        |    **✔**     |    **✔**     |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |       ✔        |
+|     **[IEEExplore](https://ieeexplore.ieee.org/)**      |    **✔**     |    **✔**     |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |       ✔        |
+|         **[DBLP](https://dblp.uni-trier.de/)**          |      ✔       |      ✔       |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |       ✔        |
+|  **[web of science](http://apps.webofknowledge.com/)**  |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+|        **[百度学术](https://xueshu.baidu.com/)**        |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+|          **[必应学术](https://cn.bing.com/)**           |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+|          **[Aminer](https://www.aminer.cn/)**           |    **✔**     |    **✔**     |    ✔    |       **✔**        |     ✔     |         ✔          |      ✔       |    ✔     |       ✔        |
+|     **[PubMed](https://pubmed.ncbi.nlm.nih.gov/)**      |    **✔**     |    **✔**     |    ✔    |       **✔**        |           |         ✔          |              |    ✔     |       ✔        |
+|         **[ReadPaper](https://readpaper.com/)**         |    **✔**     |    **✔**     |  **✔**  |       **✔**        |   **✔**   |       **✔**        |    **✔**     |    ✔     |       ✔        |
 
 #### 使用说明
 
@@ -168,6 +170,10 @@
 - **[readpaper](https://readpaper.com/):展示**
 
   ![](picture/readpaper.png)
+
+- **熊猫学术、深度学术（谷歌镜像展示）：**
+
+![](picture/pandasscholar1.png)![](picture/deepscholar1.png)
 
 ### 2.在线翻译
 
@@ -325,6 +331,8 @@
 - XDU：《关于发布《西安电子科技大学高水平期刊目录（2021年）》的通知》，英文约175种，中文约300种。
 - SDUFE：[《山东财经大学学术期刊分类目录》](https://yjsy.sdufe.edu.cn/info/1042/2279.htm)，英文约200种，中文约650种。
 - EI：[《CPXSourceList112021.xlsx》](https://www.elsevier.com/solutions/engineering-village/content/compendex)，英文约5200种，中文约200种。
+- NJU：《南京大学超一流、学科群一流、SCI A区和B区期刊目录.xlsx》，英文约560种。
+- A&HCI：[《wos-core_AHCI 2021-March-15》](https://phdtalks.org/2021/05/download-ahci-journal-list-latest.html)，英文约1900种。
 - 百度翻译接口：https://api.fanyi.baidu.com/
 - 谷歌翻译接口：https://translate.googleapis.com/translate_a
 - 腾讯翻译接口：https://cloud.tencent.com/document/product/551/15619
@@ -340,7 +348,7 @@
 | 2021.6.21  |            支持微软学术、IEEE、springer显示swufe             |   Nixiak-nan   |
 | 2021.6.23  | 成功在[谷歌商店](https://chrome.google.com/webstore/detail/swufe-cff-show-conference/njgedjcccpcfmjecccaajkjiphpddfji)上架 |   Nixiak-nan   |
 | 2021.6.30  |              增加对web of science显示swufe等级               |   Nixiak-nan   |
-| 2021.6.30  | 成功在[火狐商店](https://addons.mozilla.org/zh-CN/firefox/addon/swufe_ccf_show_rank/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)上架 |   Nixiak-nan   |
+| 2021.6.30  | 成功在[火狐商店](https://addons.mozilla.org/zh-CN/firefox/addon/easyscholar/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)上架 |   Nixiak-nan   |
 |  2021.7.1  |            增加对百度学术显示swufe等级（中、英）             |   Nixiak-nan   |
 | 2021.7.10  |      增加对**新版**web of science显示swufe等级（V2.5）       |   Nixiak-nan   |
 |  2021.8.2  | 修改了谷歌学术显示CCF的方式，详情[点此查看](https://github.com/Nixiak-nan/easyScholar/issues/7) |   Nixiak-nan   |
@@ -368,4 +376,5 @@
 | 2021.12.3  |          支持腾讯翻译源，设置翻译位置，隐藏翻译结果          |   Nixiak-nan   |
 | 2021.12.4  |                     支持彩云小译（V4.2）                     |   Nixiak-nan   |
 | 2021.12.13 |       支持知网高级搜索，修复与sci-hub button冲突的bug        |   Nixiak-nan   |
-| 2021.12.16 | 重写的谷歌学术判断逻辑，现在不会卡住页面了<br>增加了山东财经大学、EI索引 |   Nixiak-nan   |
+| 2021.12.16 | 重写的谷歌学术判断逻辑，现在不会卡住页面了<br>增加了山东财经大学、EI索引、南大<br>增加熊猫学术、深度学术两个谷歌镜像 |   Nixiak-nan   |
+| 2021.12.17 | 增加了南大、A&HCI等级<br/>熊猫学术、深度学术两个谷歌镜像<br/>支持知网显示英文等级 |   Nixiak-nan   |

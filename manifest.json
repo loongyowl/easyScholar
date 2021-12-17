@@ -50,6 +50,8 @@
 				"show_ranking/ranking/xdu.js",
 				"show_ranking/ranking/sdufe.js",
 				"show_ranking/ranking/eii.js",
+				"show_ranking/ranking/nju.js",
+				"show_ranking/ranking/ahci.js",
 				
                 "show_ranking/site/siteUtil.js",
                 "show_ranking/site/acm.js",
@@ -57,6 +59,7 @@
                 "show_ranking/site/ieee.js",
                 "show_ranking/site/springer.js",
                 "show_ranking/site/new_scholar.js",
+                "show_ranking/site/pandasScholar.js",
                 "show_ranking/site/zhiwang.js",
 				"show_ranking/site/microsoft.js",
 				"show_ranking/site/webofscience.js",
@@ -95,6 +98,8 @@
 				"show_ranking/data/pkuRankingName.js",
 				"show_ranking/data/xduRankingName.js",
 				"show_ranking/data/eiiRankingName.js",
+				"show_ranking/data/njuRankingName.js",
+				"show_ranking/data/ahciRankingName.js",
 				
                 "show_ranking/script.js",
 
