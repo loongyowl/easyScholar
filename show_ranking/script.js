@@ -1,5 +1,5 @@
 let optionCheckd;
-let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci', 'zhongguokejihexin'];
+let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci', 'zhongguokejihexin', 'cqu'];
 
 function checkOption() {
 	chrome.storage.sync.get({"displayUnit": default_displayUnit}, function(items) {
@@ -233,6 +233,9 @@ function start(){
 		if (optionCheckd.includes("pku")){
 			scholar.rankSpanListSwufe.push(pku.getRankingSpan);
 		}
+		if (optionCheckd.includes("cqu")){
+			scholar.rankSpanListSwufe.push(cqu.getRankingSpan);
+		}
 		if (optionCheckd.includes("sdufe")){
 			scholar.rankSpanListSwufe.push(sdufe.getRankingSpanEn);
 			scholar.rankSpanListSwufe.push(sdufe.getRankingSpan);
@@ -314,6 +317,9 @@ function start(){
 		}
 		if (optionCheckd.includes("pku")){
 			pandasScholar.rankSpanListSwufe.push(pku.getRankingSpan);
+		}
+		if (optionCheckd.includes("cqu")){
+			pandasScholar.rankSpanListSwufe.push(cqu.getRankingSpan);
 		}
 		if (optionCheckd.includes("sdufe")){
 			pandasScholar.rankSpanListSwufe.push(sdufe.getRankingSpanEn);
@@ -399,6 +405,9 @@ function start(){
 		if(optionCheckd.includes("pku")){
 			zhiwang.rankingSpanProvider.push(pku.getRankingSpan);
 		}
+		if(optionCheckd.includes("cqu")){
+			zhiwang.rankingSpanProvider.push(cqu.getRankingSpan);
+		}
 		if(optionCheckd.includes("sdufe")){
 			zhiwang.rankingSpanProvider.push(sdufe.getRankingSpan);
 			zhiwang.rankingSpanProvider.push(sdufe.getRankingSpanEn);
@@ -475,6 +484,9 @@ function start(){
 		}
 		if (optionCheckd.includes("pku")){
 			microsoft.rankingSpanProvider.push(pku.getRankingSpan);
+		}
+		if (optionCheckd.includes("cqu")){
+			microsoft.rankingSpanProvider.push(cqu.getRankingSpan);
 		}
 		if (optionCheckd.includes("sdufe")){
 			microsoft.rankingSpanProvider.push(sdufe.getRankingSpanEn);
@@ -559,6 +571,9 @@ function start(){
 			if (optionCheckd.includes("pku")){
 				webofscience.rankSpanListSwufe.push(pku.getRankingSpan);
 			}
+			if (optionCheckd.includes("cqu")){
+				webofscience.rankSpanListSwufe.push(cqu.getRankingSpan);
+			}
 			if (optionCheckd.includes("sdufe")){
 				webofscience.rankSpanListSwufe.push(sdufe.getRankingSpanEn);
 				webofscience.rankSpanListSwufe.push(sdufe.getRankingSpan);
@@ -642,6 +657,9 @@ function start(){
 		if (optionCheckd.includes("pku")){
 			newwebofscience.rankSpanListSwufe.push(pku.getRankingSpan);
 		}
+		if (optionCheckd.includes("cqu")){
+			newwebofscience.rankSpanListSwufe.push(cqu.getRankingSpan);
+		}
 		if (optionCheckd.includes("sdufe")){
 			newwebofscience.rankSpanListSwufe.push(sdufe.getRankingSpanEn);
 			newwebofscience.rankSpanListSwufe.push(sdufe.getRankingSpan);
@@ -716,6 +734,12 @@ function start(){
 		}
 		if (optionCheckd.includes("pku")){
 			baiduxueshu.rankSpanListSwufe.push(pku.getRankingSpan);
+		}
+		if (optionCheckd.includes("cqu")){
+			baiduxueshu.rankSpanListSwufe.push(cqu.getRankingSpan);
+		}
+		if (optionCheckd.includes("cqu")){
+			baiduxueshu.rankSpanListSwufe.push(cqu.getRankingSpan);
 		}
 		if (optionCheckd.includes("sdufe")){
 			baiduxueshu.rankSpanListSwufe.push(sdufe.getRankingSpanEn);
@@ -797,6 +821,9 @@ function start(){
 		}
 		if (optionCheckd.includes("pku")){
 			aminer.rankSpanListSwufe.push(pku.getRankingSpan);
+		}
+		if (optionCheckd.includes("cqu")){
+			aminer.rankSpanListSwufe.push(cqu.getRankingSpan);
 		}
 		if (optionCheckd.includes("sdufe")){
 			aminer.rankSpanListSwufe.push(sdufe.getRankingSpanEn);
@@ -930,6 +957,9 @@ function start(){
 		if (optionCheckd.includes("pku")){
 			bing.rankSpanListSwufe.push(pku.getRankingSpan);
 		}
+		if (optionCheckd.includes("cqu")){
+			bing.rankSpanListSwufe.push(cqu.getRankingSpan);
+		}
 		if (optionCheckd.includes("sdufe")){
 			bing.rankSpanListSwufe.push(sdufe.getRankingSpanEn);
 			bing.rankSpanListSwufe.push(sdufe.getRankingSpan);
@@ -1009,6 +1039,9 @@ function start(){
 		}
 		if (optionCheckd.includes("pku")){
 			readpaper.rankSpanListSwufe.push(pku.getRankingSpan);
+		}
+		if (optionCheckd.includes("cqu")){
+			readpaper.rankSpanListSwufe.push(cqu.getRankingSpan);
 		}
 		if (optionCheckd.includes("sdufe")){
 			readpaper.rankSpanListSwufe.push(sdufe.getRankingSpanEn);

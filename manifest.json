@@ -53,6 +53,7 @@
 				"show_ranking/ranking/nju.js",
 				"show_ranking/ranking/ahci.js",
 				"show_ranking/ranking/zhongguokejihexin.js",
+				"show_ranking/ranking/cqu.js",
 
                 "show_ranking/site/siteUtil.js",
                 "show_ranking/site/acm.js",
@@ -102,10 +103,10 @@
 				"show_ranking/data/njuRankingName.js",
 				"show_ranking/data/ahciRankingName.js",
 				"show_ranking/data/zhongguokejihexinRankingName.js",
+				"show_ranking/data/cquRankingName.js",
 
                 "show_ranking/script.js",
 
-				
 				"popup/js/jquery-3.3.1.min.js",
 				"popup/js/jquery-labelauty.js",
 				

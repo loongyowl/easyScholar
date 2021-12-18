@@ -1,4 +1,4 @@
-let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci', 'zhongguokejihexin'];
+let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci', 'zhongguokejihexin', 'cqu'];
 
 function save_options() {
 
@@ -44,6 +44,7 @@ function restore_options() {
 		document.getElementById('nju').checked = items.includes('nju');
 		document.getElementById('ahci').checked = items.includes('ahci');
 		document.getElementById('zhongguokejihexin').checked = items.includes('zhongguokejihexin');
+		document.getElementById('cqu').checked = items.includes('cqu');
 		document.getElementById('check-all').checked = items.includes('all');
 	});
 }
