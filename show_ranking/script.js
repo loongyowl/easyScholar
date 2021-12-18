@@ -1,5 +1,5 @@
 let optionCheckd;
-let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci'];
+let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci', 'zhongguokejihexin'];
 
 function checkOption() {
 	chrome.storage.sync.get({"displayUnit": default_displayUnit}, function(items) {
@@ -55,6 +55,9 @@ function start(){
 		if (optionCheckd.includes("ahci")){
 			ieee.rankSpanListSwufe.push(ahci.getRankingSpanEn);
 		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			ieee.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+		}
 		if (optionCheckd.includes("swufe")){
 			ieee.rankSpanListSwufe.push(swufe.getRankingSpanEn);
 		}
@@ -109,6 +112,9 @@ function start(){
 		if (optionCheckd.includes("ahci")){
 			dblp2.rankSpanListSwufe.push(ahci.getRankingSpanEn);
 		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			dblp2.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+		}
 		if (optionCheckd.includes("swufe")){
 			dblp2.rankSpanListSwufe.push(swufe.getRankingSpanEn);
 		}
@@ -159,6 +165,9 @@ function start(){
 		}
 		if (optionCheckd.includes("ahci")){
 			springer.rankSpanListSwufe.push(ahci.getRankingSpanEn);
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			springer.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
 		}
 		if (optionCheckd.includes("swufe")){
 			springer.rankSpanListSwufe.push(swufe.getRankingSpanEn);
@@ -231,6 +240,10 @@ function start(){
 		if (optionCheckd.includes("eii")){
 			scholar.rankSpanListSwufe.push(eii.getRankingSpanEn);
 			scholar.rankSpanListSwufe.push(eii.getRankingSpan);
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			scholar.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+			scholar.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
 		}
 		if (optionCheckd.includes("nju")){
 			scholar.rankSpanListSwufe.push(nju.getRankingSpanEn);
@@ -309,6 +322,10 @@ function start(){
 		if (optionCheckd.includes("eii")){
 			pandasScholar.rankSpanListSwufe.push(eii.getRankingSpanEn);
 			pandasScholar.rankSpanListSwufe.push(eii.getRankingSpan);
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			pandasScholar.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+			pandasScholar.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
 		}
 		if (optionCheckd.includes("ahci")){
 			pandasScholar.rankSpanListSwufe.push(ahci.getRankingSpanEn);
@@ -390,6 +407,10 @@ function start(){
 			zhiwang.rankingSpanProvider.push(eii.getRankingSpan);
 			zhiwang.rankingSpanProvider.push(eii.getRankingSpanEn);
 		}
+		if(optionCheckd.includes("zhongguokejihexin")){
+			zhiwang.rankingSpanProvider.push(zhongguokejihexin.getRankingSpan);
+			zhiwang.rankingSpanProvider.push(zhongguokejihexin.getRankingSpanEn);
+		}
 		if(optionCheckd.includes("ahci")){
 			zhiwang.rankingSpanProvider.push(ahci.getRankingSpanEn);
 		}
@@ -462,6 +483,10 @@ function start(){
 		if (optionCheckd.includes("eii")){
 			microsoft.rankingSpanProvider.push(eii.getRankingSpanEn);
 			microsoft.rankingSpanProvider.push(eii.getRankingSpan);
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			microsoft.rankingSpanProvider.push(zhongguokejihexin.getRankingSpanEn);
+			microsoft.rankingSpanProvider.push(zhongguokejihexin.getRankingSpan);
 		}
 		if (optionCheckd.includes("ahci")){
 			microsoft.rankingSpanProvider.push(ahci.getRankingSpanEn);
@@ -542,6 +567,10 @@ function start(){
 				webofscience.rankSpanListSwufe.push(eii.getRankingSpanEn);
 				webofscience.rankSpanListSwufe.push(eii.getRankingSpan);
 			}
+			if (optionCheckd.includes("zhongguokejihexin")){
+				webofscience.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+				webofscience.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
+			}
 			if (optionCheckd.includes("ahci")){
 				webofscience.rankSpanListSwufe.push(ahci.getRankingSpanEn);
 			}
@@ -621,6 +650,10 @@ function start(){
 			newwebofscience.rankSpanListSwufe.push(eii.getRankingSpanEn);
 			newwebofscience.rankSpanListSwufe.push(eii.getRankingSpan);
 		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			newwebofscience.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+			newwebofscience.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
+		}
 		if (optionCheckd.includes("ahci")){
 			newwebofscience.rankSpanListSwufe.push(ahci.getRankingSpanEn);
 		}	
@@ -697,7 +730,11 @@ function start(){
 		}		
 		if (optionCheckd.includes("ahci")){
 			baiduxueshu.rankSpanListSwufe.push(ahci.getRankingSpanEn);
-		}	
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			baiduxueshu.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+			baiduxueshu.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
+		}
 		if (optionCheckd.includes("swufe")){
 			baiduxueshu.rankSpanListSwufe.push(swufe.getRankingSpanEn);
 			baiduxueshu.rankSpanListSwufe.push(swufe.getRankingSpan);
@@ -769,6 +806,10 @@ function start(){
 			aminer.rankSpanListSwufe.push(eii.getRankingSpanEn);
 			aminer.rankSpanListSwufe.push(eii.getRankingSpan);
 		}
+		if (optionCheckd.includes(zhongguokejihexin)){
+			aminer.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+			aminer.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
+		}
 		if (optionCheckd.includes("ahci")){
 			aminer.rankSpanListSwufe.push(ahci.getRankingSpanEn);
 		}
@@ -820,6 +861,9 @@ function start(){
 		}
 		if (optionCheckd.includes("eii")){
 			pubmed.rankSpanListSwufe.push(eii.getRankingSpanEn);
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			pubmed.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
 		}
 		if (optionCheckd.includes("ahci")){
 			pubmed.rankSpanListSwufe.push(ahci.getRankingSpanEn);
@@ -893,6 +937,10 @@ function start(){
 		if (optionCheckd.includes("eii")){
 			bing.rankSpanListSwufe.push(eii.getRankingSpanEn);
 			bing.rankSpanListSwufe.push(eii.getRankingSpan);
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			bing.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+			bing.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
 		}
 		if (optionCheckd.includes("ahci")){
 			bing.rankSpanListSwufe.push(ahci.getRankingSpanEn);
@@ -969,6 +1017,10 @@ function start(){
 		if (optionCheckd.includes("eii")){
 			readpaper.rankSpanListSwufe.push(eii.getRankingSpanEn);
 			readpaper.rankSpanListSwufe.push(eii.getRankingSpan);
+		}
+		if (optionCheckd.includes("zhongguokejihexin")){
+			readpaper.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpanEn);
+			readpaper.rankSpanListSwufe.push(zhongguokejihexin.getRankingSpan);
 		}
 		if (optionCheckd.includes("swufe")){
 			readpaper.rankSpanListSwufe.push(swufe.getRankingSpanEn);
