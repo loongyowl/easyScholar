@@ -1,15 +1,24 @@
 let optionCheckd;
 let default_displayUnit = ['all', 'sci', 'swufe', 'ccf', 'cufe', 'sciif', 'fdu', 'sjtu', 'cssci', 'xmu', 'ruc', 'cscd', 'uibe', 'swjtu', 'xdu','sci-base', 'sci-up', 'pku', 'sdufe', 'eii', 'nju', 'ahci', 'zhongguokejihexin', 'cqu'];
 
-function checkOption() {
-	chrome.storage.sync.get({"displayUnit": default_displayUnit}, function(items) {
-		optionCheckd = items["displayUnit"];
-		start();
-	});
-}
+let default_cnkiDefaultUrl = "https://zhangxiangnan.work";
+let default_cnkiAdvUrl = "https://zhangxiangnan.work";
+let default_springerUrl = "https://zhangxiangnan.work";
+let default_wosOldUrl = "https://zhangxiangnan.work";
+let default_wosNewUrl = "https://zhangxiangnan.work";
+let default_pubmedUrl = "https://zhangxiangnan.work";
+let default_ieeeUrl = "https://zhangxiangnan.work";
+
+let cnkiDefaultUrl ;
+let cnkiAdvUrl ;
+let springgerUrl ;
+let wosOldUrl ;
+let wosNewUrl ;
+let pubmedUrl ;
+let ieeeUrl ;
 
 function start(){
-	if (location.href.startsWith("https://ieeexplore.ieee.org/search/searchresult.jsp?")) {
+	if (location.href.startsWith("https://ieeexplore.ieee.org/search/searchresult.jsp?") || location.href.startsWith(ieeeUrl)) {
 		if (optionCheckd.includes("ccf")){
 			ieee.rankingSpanProvider.push(ccf.getRankingSpan);
 		}
@@ -120,7 +129,7 @@ function start(){
 		}
 		dblp2.start();
 
-	} else if (location.href.startsWith("https://link.springer.com/search")) {
+	} else if (location.href.startsWith("https://link.springer.com/search") || location.href.startsWith(springerUrl)) {
 		if (optionCheckd.includes("ccf")){
 			springer.rankingSpanProvider.push(ccf.getRankingSpan);
 		}
@@ -179,8 +188,6 @@ function start(){
 		ei.start();
 	} else if (location.hostname.startsWith("scholar.google") )   {
 		if (optionCheckd.includes("ccf")){
-			ccf.custom2rank = dblp.uri2rank;
-			scholar.rankSpanList.push(ccf.getRankingSpan);
 			scholar.rankSpanListSwufe.push(swufe.CCFgetRankingSpanEn);
 		}
 		if(optionCheckd.includes("cufe")){
@@ -261,8 +268,6 @@ function start(){
 		scholar.run();
 	} else if (location.href.startsWith("https://sc.panda321.com/") || location.href.startsWith("https://xs2.dailyheadlines.cc/"))   {
 		if (optionCheckd.includes("ccf")){
-			ccf.custom2rank = dblp.uri2rank;
-			pandasScholar.rankSpanList.push(ccf.getRankingSpan);
 			pandasScholar.rankSpanListSwufe.push(swufe.CCFgetRankingSpanEn);
 		}
 		if(optionCheckd.includes("cufe")){
@@ -345,13 +350,19 @@ function start(){
 				pandasScholar.run();
 			}, 1100);
 		}else{
-			pandasScholar.run();
+			setTimeout(function() {
+				pandasScholar.run();
+			}, 500);
 		}
 
 		
 	}else if (location.href.startsWith(
-			"https://webvpn.swufe.edu.cn/https/77726476706e69737468656265737421fbf952d2243e635930068cb8/kns8/defaultresult/index"
-		) || location.href.startsWith("https://kns.cnki.net/kns8/defaultresult") || location.href.startsWith("https://kns.cnki.net/KNS8/AdvSearch")) {
+			"https://webvpn.swufe.edu.cn/https/77726476706e69737468656265737421fbf952d2243e635930068cb8/kns8/defaultresult"
+		) || location.href.startsWith("https://kns.cnki.net/kns8/defaultresult") || location.href.startsWith("https://kns.cnki.net/KNS8/AdvSearch")
+			|| location.href.startsWith(cnkiDefaultUrl) || location.href.startsWith(cnkiAdvUrl)) {
+		if (optionCheckd.includes("ccf")){
+			zhiwang.rankingSpanProvider.push(swufe.CCFgetRankingSpanEn);
+		}
 		if(optionCheckd.includes("cufe")){
 			zhiwang.rankingSpanProvider.push(cufe.getRankingSpan);	
 			zhiwang.rankingSpanProvider.push(cufe.getRankingSpanEn);	
@@ -513,7 +524,7 @@ function start(){
 			"https://webvpn.swufe.edu.cn/http/77726476706e69737468656265737421f1e7518f69276d52710e82a297422f30a0c6fa320a29ae") ||
 			location.href.startsWith(
 				"https://webvpn.swufe.edu.cn/https/77726476706e69737468656265737421f1e7518f69276d52710e82a297422f30a0c6fa320a29ae"
-			)) {
+			) || location.href.startsWith(wosOldUrl)) {
 			
 			if (optionCheckd.includes("ccf")){
 				webofscience.rankSpanListSwufe.push(swufe.CCFgetRankingSpanEn);
@@ -599,7 +610,7 @@ function start(){
 			"https://webvpn.swufe.edu.cn/https/77726476706e69737468656265737421e7e056d230356a5f781b8aa59d5b20301c1db852"
 		) || location.href.startsWith(
 			"https://webvpn.swufe.edu.cn/http/77726476706e69737468656265737421e7e056d230356a5f781b8aa59d5b20301c1db852"
-		)) {
+		) || location.href.startsWith(wosNewUrl)) {
 			
 		if (optionCheckd.includes("ccf")){
 			newwebofscience.rankSpanListSwufe.push(swufe.CCFgetRankingSpanEn);
@@ -846,7 +857,7 @@ function start(){
 		}	
 		aminer.start();
 	}else if (location.href.startsWith("https://pubmed.ncbi.nlm.nih.gov/") || location.href.startsWith(
-			"http://pubmed.ncbi.nlm.nih.gov/")){
+			"http://pubmed.ncbi.nlm.nih.gov/") || location.href.startsWith(pubmedUrl)){
 		if (optionCheckd.includes("ccf")){
 			pubmed.rankSpanListSwufe.push(swufe.CCFgetRankingSpanEn);
 		}
@@ -1063,5 +1074,20 @@ function start(){
 	}
 }
 
+$(function () {
 
-$(document).ready(checkOption);
+	chrome.storage.sync.get({"displayUnit": default_displayUnit, "cnkiDefaultUrl": default_cnkiDefaultUrl, "cnkiAdvUrl": default_cnkiAdvUrl,
+		"springerUrl": default_springerUrl, "wosOldUrl": default_wosOldUrl, "wosNewUrl": default_wosNewUrl, "pubmedUrl": default_pubmedUrl,
+		"ieeeUrl":default_ieeeUrl}, function(items) {
+
+		optionCheckd = items["displayUnit"];
+		cnkiDefaultUrl = items.cnkiDefaultUrl;
+		cnkiAdvUrl = items.cnkiAdvUrl;
+		springerUrl = items.springerUrl;
+		wosOldUrl = items.wosOldUrl;
+		wosNewUrl = items.wosNewUrl;
+		pubmedUrl = items.pubmedUrl;
+		ieeeUrl = items.ieeeUrl;
+		start();
+	});
+});

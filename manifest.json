@@ -1,18 +1,17 @@
 {
 	"name": "__MSG_appName__",
 	"manifest_version": 2,
-	"version": "4.2",
+	"version": "4.3",
 	"description": "__MSG_appDesc__",
 	"default_locale": "zh_CN",
 	"icons": {
 		"16": "lib/logo/16.png",
-		"48": "lib/logo/64.png",
+		"48": "lib/logo/48.png",
 		"128": "lib/logo/128.png"
 	},
 	"browser_action": {
 		"default_icon": {
 			"16": "lib/logo/16.png",
-			"24": "lib/logo/24.png",
 			"32": "lib/logo/32.png"
 		},
 		"default_popup":"popup/popup.html"
@@ -71,7 +70,6 @@
 				"show_ranking/site/pubmed.js",
 				"show_ranking/site/bing.js",
 				"show_ranking/site/dblp2.js",
-				"show_ranking/site/dblp.js",
 				"show_ranking/site/readpaper.js",
 				
                 "show_ranking/data/ccf-index.js",

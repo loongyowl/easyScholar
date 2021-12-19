@@ -4,6 +4,14 @@ let default_translateHideKeycode = "89";
 let default_translateColor = "#55aaff";
 let default_translatePosition = "after";
 
+let default_cnkiDefaultUrl = "https://zhangxiangnan.work";
+let default_cnkiAdvUrl = "https://zhangxiangnan.work";
+let default_springerUrl = "https://zhangxiangnan.work";
+let default_wosOldUrl = "https://zhangxiangnan.work";
+let default_wosNewUrl = "https://zhangxiangnan.work";
+let default_pubmedUrl = "https://zhangxiangnan.work";
+let default_ieeeUrl = "https://zhangxiangnan.work";
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();  // 生成工具提示
 })
@@ -42,6 +50,52 @@ $(function(){
 		}
 	});
 	
+})
+
+$(function (){
+	let cnkiDefaultUrl ;
+	let cnkiAdvUrl ;
+	let springerUrl ;
+	let wosOldUrl ;
+	let wosNewUrl ;
+	let pubmedUrl ;
+	let ieeeUrl ;
+
+	chrome.storage.sync.get({"cnkiDefaultUrl": default_cnkiDefaultUrl, "cnkiAdvUrl": default_cnkiAdvUrl,
+		"springerUrl": default_springerUrl, "wosOldUrl": default_wosOldUrl, "wosNewUrl": default_wosNewUrl, "pubmedUrl": default_pubmedUrl,
+		"ieeeUrl":default_ieeeUrl}, function(items) {
+
+		cnkiDefaultUrl = items.cnkiDefaultUrl;
+		cnkiAdvUrl = items.cnkiAdvUrl;
+		springerUrl = items.springerUrl;
+		wosOldUrl = items.wosOldUrl;
+		wosNewUrl = items.wosNewUrl;
+		pubmedUrl = items.pubmedUrl;
+		ieeeUrl = items.ieeeUrl;
+
+		// 回显
+		if(cnkiDefaultUrl != "https://zhangxiangnan.work"){
+			$("#cnkiDefaultUrl").val(cnkiDefaultUrl);
+		}
+		if(cnkiAdvUrl != "https://zhangxiangnan.work"){
+			$("#cnkiAdvUrl").val(cnkiAdvUrl);
+		}
+		if(springerUrl != "https://zhangxiangnan.work"){
+			$("#springerUrl").val(springerUrl);
+		}
+		if(wosOldUrl != "https://zhangxiangnan.work"){
+			$("#wosOldUrl").val(wosOldUrl);
+		}
+		if(wosNewUrl != "https://zhangxiangnan.work"){
+			$("#wosNewUrl").val(wosNewUrl);
+		}
+		if(pubmedUrl != "https://zhangxiangnan.work"){
+			$("#pubmedUrl").val(pubmedUrl);
+		}
+		if(ieeeUrl != "https://zhangxiangnan.work"){
+			$("#ieeeUrl").val(ieeeUrl);
+		}
+	});
 })
 
 $("#saveTranslateSetting").click(function(){
@@ -87,6 +141,33 @@ $("#saveTranslateSetting").click(function(){
 			}, 500);
 			document.getElementById("saveTranslateSetting").innerHTML="Success!";
 		});	
+});
+
+$("#saveSetting").click(function () {
+
+	let cnkiDefaultUrl = $("#cnkiDefaultUrl").val().trim().length > 0 ? $("#cnkiDefaultUrl").val().trim() :"https://zhangxiangnan.work" ;
+	let cnkiAdvUrl = $("#cnkiAdvUrl").val().trim().length > 0 ? $("#cnkiAdvUrl").val().trim() :"https://zhangxiangnan.work" ;
+	let springerUrl = $("#springerUrl").val().trim().length > 0 ? $("#springerUrl").val().trim() :"https://zhangxiangnan.work" ;
+	let wosOldUrl = $("#wosOldUrl").val().trim().length > 0 ? $("#wosOldUrl").val().trim() :"https://zhangxiangnan.work" ;
+	let wosNewUrl = $("#wosNewUrl").val().trim().length > 0 ? $("#wosNewUrl").val().trim() :"https://zhangxiangnan.work" ;
+	let pubmedUrl = $("#pubmedUrl").val().trim().length > 0 ? $("#pubmedUrl").val().trim() :"https://zhangxiangnan.work" ;
+	let ieeeUrl = $("#ieeeUrl").val().trim().length > 0 ? $("#ieeeUrl").val().trim() :"https://zhangxiangnan.work" ;
+
+	chrome.storage.sync.set({
+		"cnkiDefaultUrl": cnkiDefaultUrl,
+		"cnkiAdvUrl":cnkiAdvUrl,
+		"springerUrl":springerUrl,
+		"wosOldUrl":wosOldUrl,
+		"wosNewUrl":wosNewUrl,
+		"pubmedUrl":pubmedUrl,
+		"ieeeUrl":ieeeUrl
+	}, function() {
+		setTimeout(function() {
+			document.getElementById("saveSetting").innerHTML="保存该页面所有设置";
+		}, 500);
+		document.getElementById("saveSetting").innerHTML="Success!";
+	});
+
 });
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse){

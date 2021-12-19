@@ -51,8 +51,7 @@ pandasScholar.appendRank = function() {
 		let node = singlePrepareFindElement.find("h3 > a:first");
 
 		let code = singlePrepareFindElement.parent().attr("data-cid");
-		console.log(location.hostname);
-		let url  = "https://" + location.hostname + "?q=info:" + code +
+		let url  = "https://" + location.hostname + "/scholar?q=info:" + code +
 			":scholar.google.com/&output=cite&scirp=0&hl=zh-CN";
 		$.ajax({
 			url: url,
@@ -60,22 +59,26 @@ pandasScholar.appendRank = function() {
 		}).then(function(resp) {
 			singlePrepareFindElement.find("span.easyScholarTemp").hide();
 			let $divAppendContents = $('<div></div>').append(resp);
+			console.log($divAppendContents.html());
 			let temp = $divAppendContents.find("tr");
+			// console.log(temp);
 			let title;
 			$.each(temp, function() {
+				console.log($(this));
 				if ($(this).find("th.gs_cith").text() == "MLA" || $(this).find(
 						"th.gs_cith").text() == "APA") {
 					title = $(this).find("div.gs_citr i:first").text();
+					console.log($(this))
 					return false;	// break
 				}
 			});
 			if (title != undefined){
 				for (let getRankSpan of pandasScholar.rankSpanListSwufe) {
+					console.log(title.toUpperCase());
 					$(node).after(getRankSpan(title.toUpperCase()));
 				}
 			}
 		});
-
 	});
 }
 
