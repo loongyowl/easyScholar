@@ -1,10 +1,10 @@
 [TOC]
 
-# 欢迎访问easyScholar源代码资源库！
+# 欢迎访问easyScholar！
 
-# Welcome to visit source of easyScholar!
+# Welcome to visit easyScholar!
 
->  **国内用户可以前往[CSDN](https://blog.csdn.net/weixin_49328057/article/details/113148625?spm=1001.2014.3001.5502)查看， 源代码及数据请前往[Github](https://github.com/Nixiak-nan/easyScholar)查看**
+>  **用户可以前往[CSDN](https://blog.csdn.net/weixin_49328057/article/details/113148625?spm=1001.2014.3001.5502)查看**。
 
 ## 简介
 
@@ -19,14 +19,21 @@
 
 1. Microsoft Edge应用商店下载 **（推荐）**：点击[easyScholar](https://microsoftedge.microsoft.com/addons/detail/easyscholar/bpepicgagmdchlkjjeeiekpoafehpagm)，点击安装即可。
 2. 谷歌应用商店下载 **（需要梯子）**  ：点击[easyScholar](https://chrome.google.com/webstore/detail/easyscholar/njgedjcccpcfmjecccaajkjiphpddfji?hl=zh-CN&authuser=0)，点击安装即可。
-2. 火狐应用商店下载：点击[easyScholar](https://addons.mozilla.org/zh-CN/firefox/addon/easyscholar/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)，点击安装即可。
-3. 离线安装方法（此为谷歌浏览器教程，其他浏览器步骤基本相似）：
-   - 从[GitHub](https://github.com/Nixiak-nan/easyScholar)**下载**源代码
-   - 解压至**某个文件夹**中。（可删除picture、数据份文件文件夹，readme.md）
-   - 打开谷歌浏览器，依次点击**右上方三个小点点，更多工具，扩展程序**。
-   - 打开右上方**开发者模式**。
-   - 点击左上角**加载已解压的扩展程序**。
-   - 选择**步骤2的文件夹**。
+3. 火狐应用商店下载：点击[easyScholar](https://addons.mozilla.org/zh-CN/firefox/addon/easyscholar/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search)，点击安装即可。
+4. 离线安装方法（此为**edge浏览器**教程，其他浏览器步骤基本相似）：
+
+   - 首先作者不提倡这种安装方式，最好通过商店安装。离线安装代码未经过商店审核，且并不能收到更新。
+   - 原有的Github下载代码安装方式，由于大多数用户无法正常访问Github，从即日起取消该种方式。
+   - 访问**easyScholar.cc**
+   - **输入账号1，密码1**，进入easyScholar科研云盘
+   - 进入**easyScholar**文件夹，下载后缀名为**.crx**文件。
+   - 打开edge浏览器，依次点击**右上方三个小点点，扩展，管理扩展**。
+   - 在**管理扩展界面左方**打开**开发人员模式**。
+   - **直接拖拽.crx文件到页面中**，松手即可安装。
+   - **若提示安装失败**（尤其是谷歌浏览器，是禁止拖拽安装的）
+   - 将.crx文件**修改后缀为.zip**，解压到某一个文件夹中。
+   - 点击左上角**加载解压缩的扩展**。
+   - 选择**刚刚解压的文件夹**。
 
 ## 项目展示
 
@@ -319,7 +326,7 @@
 
 不建议。该云盘是为了让用户临时存储文件，例如前往打印店打印、需要传输文件却忘带U盘、多台电脑分布各种论文需要集中保管。对于重要文件的存储，不符合上述所说的场景。
 
-## [数据来源](https://github.com/Nixiak-nan/easyScholar/tree/master/%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6)
+## 数据来源（数据均收集自互联网，版权归各单位所有）
 
 - CCF:  《中国计算机学会推荐国际学术会议和期刊、中文科技期刊目录-2019》，英文大约620种，中文约40种
 - SWUFE :《西南财经大学学术期刊目录2018》，中文约600种，英文约1700种
