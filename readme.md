@@ -25,20 +25,20 @@
 
 4. 离线安装方法（此为**edge浏览器**教程，其他浏览器步骤基本相似）：
 
-   - 首先作者不提倡这种安装方式，最好通过商店安装。离线安装代码未经过商店审核，且并不能收到更新。
-   - 原有的Github下载代码安装方式，由于大多数用户无法正常访问Github，从即日起取消该种方式。
+    - 首先作者不提倡这种安装方式，最好通过商店安装。离线安装代码未经过商店审核，且并不能收到更新。
+    - 原有的Github下载代码安装方式，由于大多数用户无法正常访问Github，从即日起取消该种方式。
 
-   - 访问**easyScholar.cc**
-   - **输入账号1，密码1**，进入easyScholar科研云盘
-   - 进入**easyScholar**文件夹，下载后缀名为**.crx**文件。
-   - 打开edge浏览器，依次点击**右上方三个小点点，扩展，管理扩展**。
-   - 进入管理扩展界面中，**直接拖拽.crx文件到页面中**，松手即可安装。
+    - 访问**easyScholar.cc**
+    - **输入账号1，密码1**，进入easyScholar科研云盘
+    - 进入**easyScholar**文件夹，下载后缀名为**.crx**文件。
+    - 打开edge浏览器，依次点击**右上方三个小点点，扩展，管理扩展**。
+    - 进入管理扩展界面中，**直接拖拽.crx文件到页面中**，松手即可安装。
 
-   - **若提示安装失败**（尤其是谷歌浏览器，是禁止拖拽安装的）
-   - 将.crx文件**修改后缀为.zip**，解压到某一个文件夹中。
-   - 在**管理扩展界面左方**打开**开发人员模式**。
-   - 点击左上角**加载解压缩的扩展**。
-   - 选择**刚刚解压的文件夹**。
+    - **若提示安装失败**（尤其是谷歌浏览器，是禁止拖拽安装的）
+    - 将.crx文件**修改后缀为.zip**，解压到某一个文件夹中。
+    - 在**管理扩展界面左方**打开**开发人员模式**。
+    - 点击左上角**加载解压缩的扩展**。
+    - 选择**刚刚解压的文件夹**。
 
 ## 项目展示
 
@@ -116,7 +116,7 @@
 - **[谷歌学术](https://scholar.google.com.hk/schhp?hl=zh-CN)展示：**
 
   ![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/3.png)
-  
+
   ![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/scholar1.png)![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/scholar2.png)
 
 
@@ -132,9 +132,9 @@
 
   ![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/springer1.png)
 
-  
 
-  
+
+
 
 
 
@@ -148,7 +148,7 @@
 
   ![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/webofscience3.png)
 
-  
+
 
 - **[web of science新版](https://www.webofscience.com/) 展示：（您可以点击右上角Products，点击web of science(Classic)切换回旧版），支持以西财VPN访问的链接。**
 
@@ -231,12 +231,12 @@
 
   ![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/translate1.png)
 
-  
+
 
 - 您可以选择翻译结果产生的位置，以及更换默认颜色。
 
   ![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/translate3.png)
-  
+
 - 在此设置翻译源、按键、颜色等。
 
   ![](https://easyscholar-1302844457.cos.ap-chengdu.myqcloud.com/picture/translate_setting1.png)
